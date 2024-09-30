@@ -4,9 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 id="#myHeader">Hello guys</h1>
+    <section>
+      <div class="cart-item">
+        <!-- Product image and name -->
+        <div class="product">
+          <img
+            src="https://images.unsplash.com/photo-1601944179066-29786cb9d32a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+            width="70px"
+            height="70px"
+          />
+          <div class="product-name">
+            <h3>Television</h3>
+            <p>Electronics</p>
+          </div>
+        </div>
+
+        <!-- Product price and Quantity -->
+
+        <div class="product-price">
+          <p><span>$</span>40</p>
+          <button id="delete-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#008000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-trash-2"
+            >
+              <path d="M3 6h18" />
+              <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+              <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+              <line x1="10" x2="10" y1="11" y2="17" />
+              <line x1="14" x2="14" y1="11" y2="17" />
+            </svg>
+          </button>
+
+          <!-- Product counter -->
+          <div class="product-counter">
+            <button id="minus-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#f5f5f5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-minus"
+              >
+                <path d="M5 12h14" />
+              </svg>
+            </button>
+            <p class="item-qauntity">0</p>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#f5f5f5"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-plus"
+              >
+                <path d="M5 12h14" />
+                <path d="M12 5v14" />
+              </svg>
+            </button>
+          </div>
+          <!-- Total Price  -->
+
+          <p class="total-price"><span>$</span>20</p>
+        </div>
+      </div>
+    </section>
   </body>
+
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <!-- Javascript -->
+  <script src="script.js"></script>
 </html>
