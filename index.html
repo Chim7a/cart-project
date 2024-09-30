@@ -11,12 +11,12 @@
       <div class="cart-item">
         <!-- Product image and name -->
         <div class="product">
-          <img
+          <!-- <img
             src="https://images.unsplash.com/photo-1601944179066-29786cb9d32a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             width="70px"
             height="70px"
-          />
+          /> -->
           <div class="product-name">
             <h3>Television</h3>
             <p>Electronics</p>
@@ -26,7 +26,10 @@
         <!-- Product price and Quantity -->
 
         <div class="product-price">
+          <!-- Price of item -->
           <p><span>$</span>40</p>
+
+          <!-- Delete item -->
           <button id="delete-btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,6 +53,7 @@
 
           <!-- Product counter -->
           <div class="product-counter">
+            <!-- Minus button -->
             <button id="minus-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,8 +70,12 @@
                 <path d="M5 12h14" />
               </svg>
             </button>
-            <p class="item-qauntity">0</p>
-            <button>
+
+            <!-- Item Quantity -->
+            <p id="item-quantity"></p>
+
+            <!-- Add item Button -->
+            <button id="add-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
