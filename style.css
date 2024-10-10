@@ -31,7 +31,6 @@ body {
 .product {
   display: flex;
   gap: 0.5rem;
-  align-items: flex-start;
 }
 
 .product button {
