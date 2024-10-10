@@ -11,6 +11,8 @@ let CART = [
     price: 450,
     quantity: 1,
     likes: false,
+    itemImg:
+      "https://images.unsplash.com/photo-1634571799202-619a5d4c086e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 44,
@@ -19,6 +21,8 @@ let CART = [
     price: 200,
     quantity: 1,
     likes: false,
+    itemImg:
+      "https://images.unsplash.com/photo-1465453869711-7e174808ace9?q=80&w=2952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 11,
@@ -27,6 +31,8 @@ let CART = [
     price: 60,
     quantity: 1,
     likes: false,
+    itemImg:
+      "https://images.unsplash.com/photo-1633450083431-a111627f6df2?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 33,
@@ -35,6 +41,8 @@ let CART = [
     price: 1299,
     quantity: 1,
     likes: false,
+    itemImg:
+      "https://images.unsplash.com/photo-1726828537956-61ae115d7d7a?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 19,
@@ -43,8 +51,12 @@ let CART = [
     price: 15000,
     quantity: 1,
     likes: false,
+    itemImg:
+      "https://images.unsplash.com/photo-1606986628470-26a67fa4730c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
+
+// Display Cart
 
 function displayCart() {
   CART_CONTAINER.innerHTML = CART.map((eachCartItem) => {
@@ -72,10 +84,10 @@ function displayCart() {
       </svg>
     </button>
           <img
-            src="https://images.unsplash.com/photo-1601944179066-29786cb9d32a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src=${eachCartItem.itemImg}
             alt=""
-            width="70px"
-            height="70px"
+            width="75px"
+            height="60px"
           />
           <div class="product-name">
             <h3>${eachCartItem.name}</h3>
@@ -122,6 +134,7 @@ function displayCart() {
 }
 displayCart();
 
+// Increase Counter
 function increaseQuantity(id) {
   let itemCounter = 1;
 
@@ -156,15 +169,6 @@ function deleteItem(id) {
   displayCart();
 }
 
-function totalCost() {
-  let total = 0;
-  for (let index = 0; index < CART.length; index++) {
-    total += CART[index].price * CART[index].quantity;
-  }
-  return (totalPrice.innerHTML = `$${total}`);
-}
-totalCost();
-
 function likeProduct(id) {
   CART.map((cartItem) => {
     if (cartItem.id === id) {
@@ -175,3 +179,12 @@ function likeProduct(id) {
   });
   displayCart();
 }
+
+function totalCost() {
+  let total = 0;
+  for (let index = 0; index < CART.length; index++) {
+    total += CART[index].price * CART[index].quantity;
+  }
+  return (totalPrice.innerHTML = `Total Sum: $${total}`);
+}
+totalCost();
