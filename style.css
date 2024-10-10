@@ -34,6 +34,19 @@ body {
   align-items: center;
 }
 
+.product button {
+  border: transparent;
+  background: none;
+}
+
+.like-svg {
+  fill: none;
+}
+
+.like-svg-red {
+  fill: red;
+}
+
 .product h3 {
   font-size: 1rem;
   font-weight: bold;
